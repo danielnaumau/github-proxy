@@ -1,8 +1,11 @@
+enablePlugins(JavaAppPackaging)
+
 name := "github-proxy"
 
-version := "0.1"
-
+version := git.gitHeadCommit.value.getOrElse("0.1").take(7)
 scalaVersion := "2.13.8"
+
+dockerRepository := Some("danielnaumau")
 
 val http4sVersion = "0.23.10"
 val circeVersion  = "0.14.1"
