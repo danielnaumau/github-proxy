@@ -1,5 +1,6 @@
 package com.scalac
 
+import cats.Parallel
 import cats.effect.Async
 import com.scalac.AppConfig.HttpConfig
 import org.http4s.implicits._
@@ -19,7 +20,7 @@ final class HttpServer[F[_]: Async](routes: HttpRoutes[F]) {
 }
 
 object HttpServer {
-  def apply[F[_]: Async](client: GitHubClient[F]): HttpServer[F] = {
+  def apply[F[_]: Async: Parallel](client: GitHubClient[F]): HttpServer[F] = {
     val organizationService = new OrganizationService(client)
 
     new HttpServer(
