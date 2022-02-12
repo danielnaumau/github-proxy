@@ -1,4 +1,4 @@
-package com.scalac
+package org.stupwise
 
 import cats.effect.{ExitCode, IO, IOApp}
 import org.http4s.blaze.client.BlazeClientBuilder

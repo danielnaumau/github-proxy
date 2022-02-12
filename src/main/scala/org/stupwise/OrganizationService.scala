@@ -1,10 +1,10 @@
-package com.scalac
+package org.stupwise
 
 import cats.Parallel
 import cats.effect.Async
 import cats.implicits._
-import com.scalac.GitHubMsg.In._
-import com.scalac.GitHubMsg.Out._
+import GitHubMsg.In._
+import GitHubMsg.Out._
 import io.circe.generic.auto._
 import org.http4s.circe._
 import org.http4s.dsl.Http4sDsl

@@ -3,7 +3,7 @@ package it
 import cats.implicits._
 import cats.effect._
 import cats.effect.unsafe.IORuntime
-import com.scalac.GitHubMsg.Out.ContributorResult
+import org.stupwise.GitHubMsg.Out.ContributorResult
 import org.http4s.{EntityDecoder, Status, Uri}
 import io.circe.generic.auto._
 import org.http4s.Status.Successful

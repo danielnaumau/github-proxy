@@ -1,11 +1,13 @@
-package com.scalac
+package org.stupwise
 
 import cats.effect.Sync
 import cats.implicits._
-import com.scalac.AppConfig.ClientConfig
+import AppConfig.ClientConfig
 import org.http4s._
 import org.http4s.client.Client
 import org.http4s.headers._
+
+import scala.annotation.tailrec
 
 
 trait GitHubClient[F[_]] {
@@ -22,6 +24,7 @@ object GitHubClient {
     import clientConfig._
 
     override def getAll[A](query: String)(implicit d: EntityDecoder[F, List[A]]): F[List[A]] = {
+
       def readAllPages(page: Int)(implicit d: EntityDecoder[F, List[A]]): F[List[A]] = {
         val iter = expect(query, page)
 

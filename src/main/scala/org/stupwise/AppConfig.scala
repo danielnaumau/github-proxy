@@ -1,7 +1,7 @@
-package com.scalac
+package org.stupwise
 
 import cats.effect.Sync
-import com.scalac.AppConfig._
+import AppConfig._
 import org.http4s.Uri
 import pureconfig.{ConfigReader, ConfigSource}
 import pureconfig.generic.auto._

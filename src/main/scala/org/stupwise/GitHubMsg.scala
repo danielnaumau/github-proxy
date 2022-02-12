@@ -1,4 +1,4 @@
-package com.scalac
+package org.stupwise
 
 object GitHubMsg {
   object In {

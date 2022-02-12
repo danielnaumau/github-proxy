@@ -1,8 +1,8 @@
-package com.scalac
+package org.stupwise
 
 import cats.Parallel
 import cats.effect.Async
-import com.scalac.AppConfig.HttpConfig
+import AppConfig.HttpConfig
 import org.http4s.implicits._
 import org.http4s.HttpRoutes
 import org.http4s.blaze.server.BlazeServerBuilder
