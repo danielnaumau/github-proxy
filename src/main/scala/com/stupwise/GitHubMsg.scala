@@ -1,4 +1,4 @@
-package org.stupwise
+package com.stupwise
 
 object GitHubMsg {
   object In {

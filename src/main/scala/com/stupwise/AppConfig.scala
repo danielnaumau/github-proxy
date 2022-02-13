@@ -1,4 +1,4 @@
-package org.stupwise
+package com.stupwise
 
 import cats.effect.Sync
 import AppConfig._

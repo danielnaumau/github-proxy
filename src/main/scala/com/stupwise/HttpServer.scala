@@ -1,4 +1,4 @@
-package org.stupwise
+package com.stupwise
 
 import cats.Parallel
 import cats.effect.Async
